@@ -54,6 +54,17 @@
 
 ## Screenshots
 
+<img src="https://github.com/tushal13/Buddify/assets/113960162/f2a92c4b-7d9e-4e52-be08-51db50b5a9a8" alt="Image" width="200"> 
 
+<img src="https://github.com/tushal13/Buddify/assets/113960162/21f5cfa5-1c3c-433a-823a-85562f284c21" alt="Image" width="200"> 
+
+
+## Images Generation by Buddify!
+
+<img src="https://github.com/tushal13/Buddify/assets/113960162/e9c6503a-bc6f-4a54-bfad-cc2d1ac92b8f" alt="Image" width="200" height="200"> 
+
+<img src="https://github.com/tushal13/Buddify/assets/113960162/1f3efbeb-804c-45ef-b98d-2172ff86b703" alt="Image" width="200" height="200"> 
+
+<img src="https://github.com/tushal13/Buddify/assets/113960162/343dcf59-82ca-4150-9545-3ce553a7bbeb" alt="Image" width="200" height="200"> 
 
 🌟 **Star the Repository** 🌟: If you find Buddyfy interesting or useful, please consider starring the repository to show your support!
