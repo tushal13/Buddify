@@ -32,24 +32,41 @@
 
 [Explanation of how the app follows the MVC architectural pattern, highlighting the role of controllers, models, and views]
 
-📦 Buddyfy
+📦 Buddyfy                                                                                       
  ┣ 📂 lib
+ 
  ┃ ┣ 📂 controllers
+ 
  ┃ ┃ ┣ 📜 geminicontroller.dart
+ 
  ┃ ┃ ┣ 📜 imagecontroller.dart
+ 
  ┃ ┃ ┗ 📜 keyboardcontroller.dart
+ 
  ┃ ┣ 📂 helpers
+ 
  ┃ ┃ ┣ 📜 gemini_helper.dart
+ 
  ┃ ┃ ┗ 📜 imagin_helper.dart
+ 
  ┃ ┣ 📂 models
+ 
  ┃ ┃ ┣ 📜 gemini_chat_modal.dart
+ 
  ┃ ┃ ┗ 📜 gemini_modal.dart
+ 
  ┃ ┣ 📂 screens
+ 
  ┃ ┃ ┣ 📜 chat_page.dart
+ 
  ┃ ┃ ┣ 📜 main_page.dart
+ 
  ┃ ┃ ┗ 📜 image_page.dart
+ 
  ┃ ┃ ┗ 📜 splesh_screen.dart
+ 
  ┃ ┣ 📜 main.dart
+ 
  ┗ 📜 .gitignore
 
 ## Screenshots
