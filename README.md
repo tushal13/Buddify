@@ -20,16 +20,6 @@
 - **Gemini AI Image Generation**: Generate realistic and diverse images using Gemini AI technology, suitable for various contexts and purposes.
 - **Image Sharing**: Share generated images with friends and buddies directly from the app for fun and creative interactions.
 
-### Buddy Discovery and Communication
-
-- **Find Buddies**: Discover and connect with buddies who share similar interests, hobbies, and activities for engaging conversations and collaborations.
-- **Real-time Chat**: Communicate with buddies through real-time text messaging, enhancing social interactions and connections.
-
-### Event Planning and Organization
-
-- **Organize Events**: Plan and organize events within the app, inviting buddies to join and participate in various activities.
-- **Event Calendar**: Keep track of scheduled events and activities, ensuring timely reminders and coordination.
-
 ## Technologies Used
 
 - **Flutter**: Google's UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.
@@ -61,9 +51,6 @@
  ┃ ┃ ┗ 📜 splesh_screen.dart
  ┃ ┣ 📜 main.dart
  ┗ 📜 .gitignore
-
-
-
 
 ## Screenshots
 
