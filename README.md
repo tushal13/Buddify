@@ -1,4 +1,4 @@
-<p align="center">
+![Screenshot_20240414_210624](https://github.com/tushal13/Buddify/assets/113960162/220635e5-e3bb-4b91-965d-49baf82871ec)<p align="center">
   <img src="https://github.com/tushal13/Buddify/assets/113960162/472862b1-83d7-4ba4-87ad-378a35518973" alt="Buddyfy Logo" />
 </p>
 
@@ -71,10 +71,15 @@
 
 ## Screenshots
 
+<img src="https://github.com/tushal13/Buddify/assets/113960162/762e239a-0752-4918-a84e-0c39566a3f9c" alt="Image" width="200"> 
+
 <img src="https://github.com/tushal13/Buddify/assets/113960162/f2a92c4b-7d9e-4e52-be08-51db50b5a9a8" alt="Image" width="200"> 
 
 <img src="https://github.com/tushal13/Buddify/assets/113960162/21f5cfa5-1c3c-433a-823a-85562f284c21" alt="Image" width="200"> 
 
+<img src="https://github.com/tushal13/Buddify/assets/113960162/83ec5475-df08-4544-8a35-775d00247a0c" alt="Image" width="200"> 
+
+<img src="https://github.com/tushal13/Buddify/assets/113960162/c4858db0-d562-42ce-9c46-0bface2ff0aa" alt="Image" width="200"> 
 
 ## Images Generation by Buddify!
 
