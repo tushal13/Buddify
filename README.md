@@ -1,5 +1,3 @@
-![Screenshot_20240414_210624](https://github.com/tushal13/Buddify/assets/113960162/220635e5-e3bb-4b91-965d-49baf82871ec)<p align="center">
-  <img src="https://github.com/tushal13/Buddify/assets/113960162/472862b1-83d7-4ba4-87ad-378a35518973" alt="Buddyfy Logo" />
 </p>
 
 <h1 align="center">Buddify</h1>
