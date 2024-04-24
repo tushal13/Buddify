@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/tushal13/Buddify/assets/113960162/31c5e257-89cb-45ad-a417-47c7f91044d4" alt="Buddify Logo" />
+  <img src="https://github.com/tushal13/Buddify/assets/113960162/31c5e257-89cb-45ad-a417-47c7f91044d4" alt="Image" width="150" />
 
 </p>
 
