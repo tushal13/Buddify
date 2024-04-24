@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://github.com/tushal13/Buddify/assets/113960162/31c5e257-89cb-45ad-a417-47c7f91044d4" alt="Buddify Logo" />
+
 </p>
 
 <h1 align="center">Buddify</h1>
