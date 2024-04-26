@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:buddify/models/gemini_modal.dart';
+import 'package:buddify/models/GeminiModal.dart';
 import 'package:http/http.dart' as http;
 import 'package:logger/logger.dart';
 

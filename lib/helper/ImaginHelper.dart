@@ -14,7 +14,7 @@ class ImaginApiHelper {
     try {
       Map<String, dynamic> headers = {
         'Authorization':
-            'Bearer 	vk-2qZB8emkoshOF0o77C35u54ZUqVvwKSh1VyvC2gDvBkLmSZ'
+            'Bearer 	vk-OX2hbLYKIBjxYDLPUj4LjJto2PN2s33I4Nb2LH0F7N2SFD0J'
       };
 
       Map<String, dynamic> payload = {
@@ -39,7 +39,7 @@ class ImaginApiHelper {
       }
     } catch (e) {
       print('Exception while imagining data: $e');
-      return null;
+      return 1;
     }
   }
 }

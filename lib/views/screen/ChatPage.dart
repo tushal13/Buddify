@@ -1,5 +1,5 @@
-import 'package:buddify/controller/geminicontroller.dart';
-import 'package:buddify/controller/keyboardcontroller.dart';
+import 'package:buddify/controller/GeminiController.dart';
+import 'package:buddify/controller/KeyboardController.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,12 +9,15 @@ import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:share_extend/share_extend.dart';
 
+import '../../controller/ThemeController.dart';
+
 class ChatPage extends StatelessWidget {
   ChatPage({super.key});
 
   static TextEditingController controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    bool isDark = Provider.of<ThemeController>(context).isDark;
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Padding(
@@ -144,10 +147,14 @@ class ChatPage extends StatelessWidget {
                                                       fontSize: 16,
                                                       fontWeight:
                                                           FontWeight.w400,
-                                                      color: Colors.white),
+                                                      color: isDark
+                                                          ? Colors.black
+                                                          : Colors.white),
                                                 ),
                                                 decoration: BoxDecoration(
-                                                    color: Color(0xff181818),
+                                                    color: isDark
+                                                        ? Colors.white
+                                                        : Color(0xff181818),
                                                     borderRadius:
                                                         BorderRadius.only(
                                                       topRight:
@@ -180,7 +187,9 @@ class ChatPage extends StatelessWidget {
                                                       },
                                                       icon: Icon(
                                                         Icons.copy,
-                                                        color: Colors.white,
+                                                        color: isDark
+                                                            ? Colors.black
+                                                            : Colors.white,
                                                       )),
                                                   IconButton(
                                                       onPressed: () {
@@ -190,7 +199,9 @@ class ChatPage extends StatelessWidget {
                                                       },
                                                       icon: Icon(
                                                         CupertinoIcons.share,
-                                                        color: Colors.white,
+                                                        color: isDark
+                                                            ? Colors.black
+                                                            : Colors.white,
                                                       )),
                                                 ],
                                               ),
@@ -212,7 +223,7 @@ class ChatPage extends StatelessWidget {
                               TextSpan(
                                 text: 'Start Chatting With \n',
                                 style: GoogleFonts.kodchasan(
-                                  color: Colors.white,
+                                  color: isDark ? Colors.black : Colors.white,
                                   fontSize: 16,
                                 ),
                               ),
@@ -254,7 +265,8 @@ class ChatPage extends StatelessWidget {
                     style: GoogleFonts.kodchasan(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
-                      color: Colors.white.withOpacity(0.9),
+                      color:
+                          isDark ? Colors.black : Colors.white.withOpacity(0.9),
                     ),
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
@@ -262,16 +274,21 @@ class ChatPage extends StatelessWidget {
                         borderSide: BorderSide.none,
                       ),
                       filled: true,
-                      fillColor: Color(0xff181818),
+                      fillColor: isDark
+                          ? Colors.grey.withOpacity(0.2)
+                          : Color(0xff181818),
                       contentPadding: EdgeInsets.all(16),
                       suffixIcon: Icon(CupertinoIcons.search),
-                      suffixIconColor: Colors.white.withOpacity(0.8),
+                      suffixIconColor:
+                          isDark ? Colors.black : Colors.white.withOpacity(0.8),
                       hintText: '\" Write Your Prompt Here \"',
                       hintStyle: GoogleFonts.kodchasan(
                         fontSize: 14,
                         letterSpacing: 1,
                         fontWeight: FontWeight.w500,
-                        color: Colors.white.withOpacity(0.5),
+                        color: isDark
+                            ? Colors.black
+                            : Colors.white.withOpacity(0.5),
                       ),
                     ),
                   ),
@@ -280,7 +297,7 @@ class ChatPage extends StatelessWidget {
                     builder: (context, kay, gem, child) {
                   return gem.typing
                       ? CircularProgressIndicator(
-                          color: Colors.white,
+                          color: isDark ? Colors.black : Colors.white,
                         )
                       : IconButton(
                           onPressed: () {
@@ -301,12 +318,14 @@ class ChatPage extends StatelessWidget {
                               ? Icon(
                                   Icons.telegram,
                                   size: 40,
-                                  color: Colors.white,
+                                  color: isDark ? Colors.black : Colors.white,
                                 )
                               : Icon(
                                   Icons.telegram,
                                   size: 40,
-                                  color: Colors.grey,
+                                  color: isDark
+                                      ? Colors.black.withOpacity(0.5)
+                                      : Colors.white.withOpacity(0.05),
                                 ));
                 }),
               ],

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 
-import '../helper/gemini_helper.dart';
-import '../models/gemini_chat_modal.dart';
-import '../models/gemini_modal.dart';
+import '../helper/GeminiHelper.dart';
+import '../models/GeminiChatModal.dart';
+import '../models/GeminiModal.dart';
 
 class GeminiController extends ChangeNotifier {
   List<GeminiModal> geminires = [];

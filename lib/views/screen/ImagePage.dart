@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:buddify/controller/imagecontroller.dart';
-import 'package:buddify/controller/keyboardcontroller.dart';
+import 'package:buddify/controller/ImageController.dart';
+import 'package:buddify/controller/KeyboardController.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -11,11 +11,14 @@ import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:share_extend/share_extend.dart';
 
+import '../../controller/ThemeController.dart';
+
 class ImagePage extends StatelessWidget {
   ImagePage({super.key});
   TextEditingController imcontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    bool isDark = Provider.of<ThemeController>(context).isDark;
     return Scaffold(
       body: Consumer2<ImageController, KeyboardController>(
           builder: (context, pro, kay, _) {
@@ -57,7 +60,8 @@ class ImagePage extends StatelessWidget {
                                   await ShareExtend.share(file.path, "image");
                                 },
                                 icon: Icon(CupertinoIcons.share,
-                                    color: Colors.white)),
+                                    color:
+                                        isDark ? Colors.black : Colors.white)),
                           ],
                         )
                       ],
@@ -73,7 +77,7 @@ class ImagePage extends StatelessWidget {
                         TextSpan(
                           text: 'Say Hi To Your Creativity With \n',
                           style: GoogleFonts.kodchasan(
-                            color: Colors.white,
+                            color: isDark ? Colors.black : Colors.white,
                             fontSize: 16,
                           ),
                         ),
@@ -114,7 +118,9 @@ class ImagePage extends StatelessWidget {
                         style: GoogleFonts.kodchasan(
                           fontSize: 16,
                           fontWeight: FontWeight.w700,
-                          color: Colors.white.withOpacity(0.9),
+                          color: isDark
+                              ? Colors.black
+                              : Colors.white.withOpacity(0.9),
                         ),
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
@@ -122,22 +128,28 @@ class ImagePage extends StatelessWidget {
                             borderSide: BorderSide.none,
                           ),
                           filled: true,
-                          fillColor: Color(0xff181818),
+                          fillColor: isDark
+                              ? Colors.grey.withOpacity(0.2)
+                              : Color(0xff181818),
                           contentPadding: EdgeInsets.all(16),
                           suffixIcon: Icon(CupertinoIcons.search),
-                          suffixIconColor: Colors.white.withOpacity(0.8),
+                          suffixIconColor: isDark
+                              ? Colors.black
+                              : Colors.white.withOpacity(0.8),
                           hintText: '\" Write Your Imagination Here \"',
                           hintStyle: GoogleFonts.kodchasan(
                             fontSize: 14,
                             letterSpacing: 1,
                             fontWeight: FontWeight.w500,
-                            color: Colors.white.withOpacity(0.5),
+                            color: isDark
+                                ? Colors.black
+                                : Colors.white.withOpacity(0.5),
                           ),
                         )),
                   ),
                   pro.typing
                       ? CircularProgressIndicator(
-                          color: Colors.white,
+                          color: isDark ? Colors.black : Colors.white,
                         )
                       : IconButton(
                           onPressed: () {
@@ -154,12 +166,14 @@ class ImagePage extends StatelessWidget {
                               ? Icon(
                                   Icons.telegram,
                                   size: 40,
-                                  color: Colors.white,
+                                  color: isDark ? Colors.black : Colors.white,
                                 )
                               : Icon(
                                   Icons.telegram,
                                   size: 40,
-                                  color: Colors.grey,
+                                  color: isDark
+                                      ? Colors.black.withOpacity(0.5)
+                                      : Colors.grey,
                                 ))
                 ],
               ),

@@ -1,10 +1,12 @@
-import 'package:buddify/views/screen/chat_page.dart';
+import 'package:buddify/views/screen/ChatPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:provider/provider.dart';
 
-import 'image_page.dart';
+import '../../controller/ThemeController.dart';
+import 'ImagePage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,6 +26,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    bool isDark = Provider.of<ThemeController>(context).isDark;
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: CustomScrollView(
@@ -46,11 +49,39 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             title: Text(
               'Buddify',
               style: GoogleFonts.kodchasan(
-                  fontSize: 22,
-                  letterSpacing: 1,
-                  fontWeight: FontWeight.w800,
-                  color: Colors.white),
+                fontSize: 22,
+                letterSpacing: 1,
+                fontWeight: FontWeight.w800,
+              ),
             ),
+            actions: [
+              Container(
+                alignment: Alignment.center,
+                margin: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                      color: Provider.of<ThemeController>(context).isDark
+                          ? Colors.white
+                          : Colors.black),
+                ),
+                child: IconButton(
+                  onPressed: () {
+                    Provider.of<ThemeController>(context, listen: false)
+                        .changeTheme();
+                  },
+                  icon: Provider.of<ThemeController>(context).isDark
+                      ? Icon(
+                          Icons.light_mode_outlined,
+                          size: 20,
+                        )
+                      : Icon(
+                          Icons.light_mode,
+                          size: 20,
+                        ),
+                ),
+              ),
+            ],
             pinned: true,
             floating: true,
             bottom: TabBar(
@@ -61,26 +92,29 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   child: Text(
                     'Chat',
                     style: GoogleFonts.kodchasan(
-                        fontSize: 16,
-                        letterSpacing: 1,
-                        fontWeight: FontWeight.w800,
-                        color: Colors.white),
+                      fontSize: 16,
+                      letterSpacing: 1,
+                      fontWeight: FontWeight.w800,
+                      color: isDark ? Colors.black : Colors.white,
+                    ),
                   ),
                   icon: Icon(
                     CupertinoIcons.chat_bubble_2,
-                    color: Colors.white,
+                    color: isDark ? Colors.black : Colors.white,
                   ),
                 ),
                 Tab(
                   child: Text(
                     'Creative',
                     style: GoogleFonts.kodchasan(
-                        fontSize: 16,
-                        letterSpacing: 1,
-                        fontWeight: FontWeight.w800,
-                        color: Colors.white),
+                      fontSize: 16,
+                      letterSpacing: 1,
+                      fontWeight: FontWeight.w800,
+                      color: isDark ? Colors.black : Colors.white,
+                    ),
                   ),
-                  icon: Icon(Icons.image_outlined, color: Colors.white),
+                  icon: Icon(Icons.image_outlined,
+                      color: isDark ? Colors.black : Colors.white),
                 ),
               ],
             ),

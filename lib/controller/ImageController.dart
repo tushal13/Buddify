@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:logger/logger.dart';
 
-import '../helper/imagin_helper.dart';
+import '../helper/ImaginHelper.dart';
 
 class ImageController extends ChangeNotifier {
   List<Uint8List> images = [];
